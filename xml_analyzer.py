@@ -27,7 +27,6 @@ class XMLAnalyzer:
         self.root = None
 
     def apply_master_formatting(self):
-        #do it one by one, start simple
         #future code -  This is the Master Loop! It reads the grid, builds the assets, 
         #               and automatically applies DVRs to headers and Tuples to data rows.
         
