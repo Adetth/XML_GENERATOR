@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XML Generation Speed Test: PyScript</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 40px auto; }
+        .box { padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        button { padding: 8px 16px; margin-top: 15px; cursor: pointer; }
+        input { padding: 4px; margin-left: 10px; }
+        #status { margin-top: 20px; font-weight: bold; color: #0066cc; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>XML Generation Speed Test: PyScript</h1>
+        <p>This application runs Python purely in the browser.</p>
+        
+        <label for="num_records">Number of EPM Form Nodes to Generate:</label>
+        <input type="number" id="num_records" value="250000" step="10000">
+        <br>
+        
+        <button py-click="run_benchmark">Start Benchmark</button>
+        
+        <div id="status">Ready.</div>
+    </div>
+
+    <script type="py">
+        import time
+        from pyscript import document
+
+        def run_benchmark(event):
+            # Grab the UI element
+            status_div = document.getElementById("status")
+            status_div.innerText = "Generating XML payload... (Browser may freeze momentarily)"
+            
+            num_records_str = document.getElementById("num_records").value
+            num_records = int(num_records_str)
+            
+            # --- EXACT SAME PYTHON LOGIC ---
+            start_time = time.time()
+            
+            xml_string = '<?xml version="1.0" encoding="UTF-8"?>\n<EPM_Forms>\n'
+            for i in range(num_records):
+                xml_string += f"""  <Form name="Banking_Rule_{i}">
+    <DataGrid>
+      <Dimensions>
+        <Dim name="Account">EPM_Acc_{i % 100}</Dim>
+        <Dim name="Period">Jan</Dim>
+        <Dim name="Year">FY26</Dim>
+      </Dimensions>
+      <Cell value="{(i * 1234) % 150000}" />
+    </DataGrid>
+  </Form>\n"""
+                
+            xml_string += "</EPM_Forms>"
+            
+            end_time = time.time()
+            time_taken = end_time - start_time
+            # -------------------------------
+            
+            status_div.innerText = f"Done! Generated {len(xml_string):,} characters in {time_taken:.4f} seconds."
+    </script>
+</body>
+</html>
