@@ -12,6 +12,9 @@ class FormatReconstructor(tk.Frame):
     def build_ui(self):
         btn_frame = tk.Frame(self, pady=10)
         btn_frame.pack(side="top", fill="x", padx=10)
+        
+        # --- NEW REFRESH BUTTON (Top Right) ---
+        tk.Button(btn_frame, text="↻ Refresh UI", command=self.refresh_ui, bg="#4CAF50", fg="white", font=("Arial", 9, "bold")).pack(side="right")
 
         tk.Button(btn_frame, text="RUN MASTER FORMATTING LOOP", width=50, height=2, bg="#c1e1c1", font=("Arial", 10, "bold"), command=self.run_master_loop).pack(pady=10)
 
@@ -27,6 +30,17 @@ class FormatReconstructor(tk.Frame):
         self.log_text.see(tk.END)
         self.log_text.config(state="disabled")
         print(message)
+        
+    def refresh_ui(self):
+        # Clears the log to give you a clean slate
+        self.log_text.config(state="normal")
+        self.log_text.delete(1.0, tk.END)
+        self.log_text.config(state="disabled")
+        self.log("UI Refreshed. Log cleared.")
+        
+        # Fire the global app sync just in case
+        if self.refresh_callback:
+            self.refresh_callback()
 
     def run_master_loop(self):
         if not self.xml_modifier.root:

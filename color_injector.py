@@ -32,6 +32,9 @@ class ColorInjector(tk.Frame):
         
         tk.Button(self.btn_frame, text="Generate Preview", command=self.update_preview).pack(side="left", padx=10)
         tk.Button(self.btn_frame, text="Inject XML", command=self.inject_entries).pack(side="left", padx=10)
+        
+        # --- NEW REFRESH BUTTON ---
+        tk.Button(self.btn_frame, text="↻ Refresh UI", command=self.populate_color_rows, bg="#4CAF50", fg="white", font=("Arial", 9, "bold")).pack(side="right", padx=10)
 
     def populate_color_rows(self):
         #start fresh every time we load

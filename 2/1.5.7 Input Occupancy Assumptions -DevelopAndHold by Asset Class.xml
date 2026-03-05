@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      options2="0"
+      suppressMissingRowsNative="false"
+      enableOffline="false"
+      smartForm="false"
+      hide="false"
+      disableSpreading="false"
+      suppressZero="false"
+      calcOnAutoSubmit="false"
+      enableCubeView="false"
+      repeatMemberLabels="false"
+      suppressInvalidScenarioTPs="false"
+      disableSheetProtection="false"
+      planType="1"
+      dir="Forms/Global Assumptions"
+      autoSubmit="false"
+      readOnly="false"
+      enableFlexForm="false"
+      nativeSuppressMissingRowsOfSmartPush="false"
+      runSmartPushAsynchronously="false"
+      globalAssumptions="false"
+      disableFormatting="false"
+      name="1.5.7 Input Occupancy Assumptions -DevelopAndHold by Asset Class">
+    <pipPrefs>{"_sP":{"_sVer":1.2},"historicalScenarioId":-1,"historicalVersionId":-1,"historicalSource":-1,"historicalCubePrefsMap":{},"memberOverride":[],"_predictionOptions":{"_predictionInterval":2,"_isImputeFutureValues":false,"_errorMeasure":3,"_forecastTechnique":0,"_leadValue":0,"_holdOutPeriod":0,"_AdjustOutliers":true,"_FillInMissingValues":true,"_PeriodsPerCycle":0,"_yearlySeasonalOverride":false,"_SeasonalMethods":true,"_NonSeasonalMethods":true,"_ARIMA":true,"_ARIMAExtendedSearch":false,"_BoxCoxTransformationType":0,"_ARIMAModelSelectionType":2,"_ScreenDetectionMethod":0,"_MSDStdDev":3.0,"_MADStdDev":3.0,"_IQDStdDev":2.22,"_ScreenAdjustmentMethod":0,"_neighborInterpolationType":0,"_Neighbors":1,"_IncludeEvents":false,"_AutomaticallyDetectEvents":0,"_accuracyThreshold":0.0,"_minimumMissingValueThreshold":50.0,"_predictionPeriodOverride":false,"_fillMissingLastPeriodHistData":0},"_calendarUuid":null,"_predictDynCalcMbrs":false,"_sVer":1.2}</pipPrefs>
+    <query>
+        <columns width="-75">
+            <segment>
+                <dimension displayMemberFormulaDesc="false"
+                           name="Plan Elements"
+                           allowFlexibleDefinition="false"
+                           displayAlias="true"
+                           applyToAllDim="false"
+                           displayMemberFormula="false"
+                           dimWidth="0"
+                           hide="false"
+                           showQualifiedName="never"
+                           drillOnSharedMbrs="false"
+                           displayName="false"
+                           expand="false"
+                           displayConsolidationOperators="false"
+                           showCurrency="false">
+                    <function name="ILvl0Descendants"
+                              offset="0">
+                        <member name="All Periods"
+                                selectionType="Auto" />
+                    </function>
+                </dimension>
+            </segment>
+        </columns>
+        <rows height="22">
+            <segment>
+                <dimension displayMemberFormulaDesc="false"
+                           name="Asset Class"
+                           allowFlexibleDefinition="false"
+                           displayAlias="true"
+                           applyToAllDim="false"
+                           displayMemberFormula="false"
+                           dimWidth="0"
+                           hide="false"
+                           enableDropdown="false"
+                           showQualifiedName="never"
+                           drillOnSharedMbrs="false"
+                           displayName="false"
+                           expand="true"
+                           displayConsolidationOperators="false"
+                           showCurrency="false">
+                    <formula ordinal="1.0"
+                             dataType="0"
+                             label="Asset Class"
+                             formulaValue="" />
+                </dimension>
+            </segment>
+            <segment>
+                <dimension displayMemberFormulaDesc="false"
+                           name="Asset Class"
+                           allowFlexibleDefinition="false"
+                           displayAlias="true"
+                           applyToAllDim="false"
+                           displayMemberFormula="false"
+                           dimWidth="0"
+                           hide="false"
+                           enableDropdown="false"
+                           showQualifiedName="never"
+                           drillOnSharedMbrs="false"
+                           displayName="false"
+                           expand="true"
+                           displayConsolidationOperators="false"
+                           showCurrency="false">
+                    <function name="ILvl0Descendants"
+                              offset="0">
+                        <member name="A_Asset Class"
+                                selectionType="Auto" />
+                    </function>
+                </dimension>
+            </segment>
+        </rows>
+        <pages>
+            <segment>
+                <dimension displayMemberFormulaDesc="false"
+                           name="Projects"
+                           allowFlexibleDefinition="false"
+                           displayAlias="true"
+                           applyToAllDim="false"
+                           displayMemberFormula="false"
+                           dimWidth="0"
+                           hide="false"
+                           showQualifiedName="never"
+                           drillOnSharedMbrs="false"
+                           displayName="false"
+                           displayConsolidationOperators="false"
+                           showCurrency="false">
+                    <function name="ILvl0Descendants"
+                              offset="0">
+                        <member name="All Project"
+                                selectionType="Auto" />
+                    </function>
+                </dimension>
+            </segment>
+        </pages>
+        <pov>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Scenario"
+                       allowFlexibleDefinition="false"
+                       displayAlias="true"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="false"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="No Scenario"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Version"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="Working"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Currency"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="AED"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Entity"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="false"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="MODON Properties"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Future 2"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="No Future 2"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Phasing"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="No Phasing"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Commercial Strategy"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="No Commercial Strategy"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Line Item"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="No Line Item"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Development Strategy"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="false"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="Develop &amp; Hold"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="View Type"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="No View Type"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Standard Quality"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="No Standard Quality"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Period"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="BegBalance"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Years"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="true"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="No Year"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+            <dimension displayMemberFormulaDesc="false"
+                       name="Account"
+                       allowFlexibleDefinition="false"
+                       displayAlias="false"
+                       applyToAllDim="false"
+                       displayMemberFormula="false"
+                       dimWidth="0"
+                       hide="false"
+                       showQualifiedName="never"
+                       drillOnSharedMbrs="false"
+                       displayName="true"
+                       displayConsolidationOperators="false"
+                       showCurrency="false">
+                <member name="Occupancy %"
+                        selectionType="Auto"
+                        visible="true" />
+            </dimension>
+        </pov>
+    </query>
+    <displayOptions>
+        <precision useCurrencyPrecision="false"
+                   nonCurrencyMax="0"
+                   nonCurrencyMin="0"
+                   currencyMax="0"
+                   percentageMax="2"
+                   currencyMin="0"
+                   percentageMin="0" />
+        <display multiCurrency="false"
+                 enableMassAllocation="false"
+                 enableGridSpread="true"
+                 hideSaveConfirmMessage="false"
+                 accountAnnotation="false"
+                 enableAdHoc="false"
+                 poundMissing="true"
+                 enableAttributeDisplay="false"
+                 enableCellAttach="true" />
+        <printOptions>
+            <pageSettings pageSize="A4"
+                          orientation="0"
+                          font=""
+                          fontSize="8"
+                          rowHeaderPercentage="35"
+                          numDataCols="10" />
+            <format supportingDetails="false"
+                    applyPrecision="false"
+                    repeatHeaders="true"
+                    reverseSupport="false"
+                    formatData="true" />
+            <printDisplay currency="true"
+                          shading="true"
+                          cellNotes="false"
+                          attribute="true"
+                          accountAnnotation="true" />
+        </printOptions>
+        <smartViewOptions enableForSmartSlice="false"
+                          enableOfflineUsage="false" />
+    </displayOptions>
+    <dataValidationRules>
+        <dataValidationRule position="1"
+                            name="New Rule"
+                            enabled="true"
+                            customStyle="true"
+                            description=""
+                            rowLocation="0.0"
+                            colLocation="1.0">
+            <dataValidationCond toolTip=""
+                                groupOpenNestingLevel="0"
+                                operator="0"
+                                displayMessageInDVPane="false"
+                                honorPmRules="false"
+                                negate="false"
+                                groupCloseNestingLevel="0"
+                                position="1"
+                                styleId="32771"
+                                type="8"
+                                bgColor="730417"
+                                Valid="true"
+                                logicalOperator="0">
+                <compareValue type="6"
+                              value="" />
+                <compareToValue type="0"
+                                value="" />
+            </dataValidationCond>
+        </dataValidationRule>
+        <dataValidationRule position="1"
+                            name="New Rule"
+                            enabled="true"
+                            customStyle="true"
+                            description=""
+                            rowLocation="2.0"
+                            colLocation="0.0">
+            <dataValidationCond toolTip=""
+                                groupOpenNestingLevel="0"
+                                operator="0"
+                                displayMessageInDVPane="false"
+                                honorPmRules="false"
+                                negate="false"
+                                groupCloseNestingLevel="0"
+                                position="1"
+                                styleId="32770"
+                                type="8"
+                                bgColor="15792383"
+                                Valid="true"
+                                logicalOperator="0">
+                <compareValue type="6"
+                              value="" />
+                <compareToValue type="0"
+                                value="" />
+            </dataValidationCond>
+        </dataValidationRule>
+        <dataValidationRule position="1"
+                            name="New Rule"
+                            enabled="true"
+                            customStyle="true"
+                            description=""
+                            rowLocation="1.0"
+                            colLocation="0.0">
+            <dataValidationCond toolTip=""
+                                groupOpenNestingLevel="0"
+                                operator="0"
+                                displayMessageInDVPane="false"
+                                honorPmRules="false"
+                                negate="false"
+                                groupCloseNestingLevel="0"
+                                position="1"
+                                styleId="32769"
+                                type="8"
+                                bgColor="15792383"
+                                Valid="true"
+                                logicalOperator="0">
+                <compareValue type="6"
+                              value="" />
+                <compareToValue type="0"
+                                value="" />
+            </dataValidationCond>
+        </dataValidationRule>
+        <dataValidationRulesOptions>
+            <RunValidationsAsLoggedInUser>true</RunValidationsAsLoggedInUser>
+            <ValidateOnlyForPagesWithBlocks>true</ValidateOnlyForPagesWithBlocks>
+            <ValidateOnlyForUsersWithAccessToForm>true</ValidateOnlyForUsersWithAccessToForm>
+            <ReplaceUserVarWithPuMember>false</ReplaceUserVarWithPuMember>
+            <LoopOverEveryPossiblePuUserVarValue>false</LoopOverEveryPossiblePuUserVarValue>
+        </dataValidationRulesOptions>
+    </dataValidationRules>
+    <formFormattings>
+        <formFormatting designTime="true"
+                        userName="[CURRENT_USER]"
+                        displayOptions="-2147483646">
+            <dataCellMbrTuples>
+                <dataCellMbrTuple>
+                    <cellStyleId>32769</cellStyleId>
+                    <frmMbrTuple>
+                        <gridLocation>rows</gridLocation>
+                        <mbr name="Asset Class"
+                             segment="32769.0"
+                             dim="Asset Class" />
+                    </frmMbrTuple>
+                    <frmMbrTuple>
+                        <gridLocation>columns</gridLocation>
+                        <mbr name="All Periods"
+                             segment="32769.0"
+                             dim="Plan Elements" />
+                    </frmMbrTuple>
+                </dataCellMbrTuple>
+                <dataCellMbrTuple>
+                    <cellStyleId>32770</cellStyleId>
+                    <frmMbrTuple>
+                        <gridLocation>rows</gridLocation>
+                        <mbr name="A_Asset Class"
+                             segment="32770.0"
+                             dim="Asset Class" />
+                    </frmMbrTuple>
+                    <frmMbrTuple>
+                        <gridLocation>columns</gridLocation>
+                        <mbr name="All Periods"
+                             segment="32770.0"
+                             dim="Plan Elements" />
+                    </frmMbrTuple>
+                </dataCellMbrTuple>
+                <dataCellMbrTuple>
+                    <cellStyleId>32771</cellStyleId>
+                    <frmMbrTuple>
+                        <gridLocation>rows</gridLocation>
+                        <mbr name="Asset Class"
+                             segment="32771.0"
+                             dim="Asset Class" />
+                    </frmMbrTuple>
+                    <frmMbrTuple>
+                        <gridLocation>columns</gridLocation>
+                        <mbr name="All Periods"
+                             segment="32771.0"
+                             dim="Plan Elements" />
+                    </frmMbrTuple>
+                </dataCellMbrTuple>
+            </dataCellMbrTuples>
+            <cellStyles>
+                <cellStyle id="32769">
+                    <objs />
+                    <cellStyleValues>
+                        <font id="32768" />
+                        <readOnly>false</readOnly>
+                        <backColor id="32768" />
+                        <wordWrap>false</wordWrap>
+                    </cellStyleValues>
+                </cellStyle>
+                <cellStyle id="32770">
+                    <objs />
+                    <cellStyleValues>
+                        <font id="32768" />
+                        <readOnly>false</readOnly>
+                        <backColor id="32768" />
+                        <wordWrap>false</wordWrap>
+                    </cellStyleValues>
+                </cellStyle>
+                <cellStyle id="32771">
+                    <objs>
+                        <obj type="border"
+                             id="32768" />
+                        <obj type="border"
+                             id="32769" />
+                        <obj type="border"
+                             id="32770" />
+                        <obj type="border"
+                             id="32771" />
+                    </objs>
+                    <cellStyleValues>
+                        <font id="32768" />
+                        <readOnly>false</readOnly>
+                        <backColor id="32770" />
+                        <txtColor id="32769" />
+                        <wordWrap>false</wordWrap>
+                        <format id="1" />
+                    </cellStyleValues>
+                </cellStyle>
+            </cellStyles>
+            <columnRowSizes />
+            <values>
+                <colors>
+                    <color R="240"
+                           G="248"
+                           B="255"
+                           id="32768" />
+                    <color R="255"
+                           G="255"
+                           B="255"
+                           id="32769" />
+                    <color R="11"
+                           G="37"
+                           B="49"
+                           id="32770" />
+                </colors>
+                <fonts>
+                    <font id="32768">Arial</font>
+                </fonts>
+                <txtFrmts>
+                    <txtFrmt id="0">Italic</txtFrmt>
+                    <txtFrmt id="1">Bold</txtFrmt>
+                    <txtFrmt id="2">Underline</txtFrmt>
+                    <txtFrmt id="3">StrikeThrough</txtFrmt>
+                </txtFrmts>
+                <vAlign />
+                <hAlign />
+            </values>
+            <objs>
+                <numFrmts />
+                <borders>
+                    <border>
+                        <id>32768</id>
+                        <color R="255"
+                               G="255"
+                               B="255" />
+                        <placement>Top</placement>
+                        <style>solid</style>
+                        <width>0.4</width>
+                    </border>
+                    <border>
+                        <id>32769</id>
+                        <color R="255"
+                               G="255"
+                               B="255" />
+                        <placement>Right</placement>
+                        <style>solid</style>
+                        <width>0.4</width>
+                    </border>
+                    <border>
+                        <id>32770</id>
+                        <color R="255"
+                               G="255"
+                               B="255" />
+                        <placement>Bottom</placement>
+                        <style>solid</style>
+                        <width>0.4</width>
+                    </border>
+                    <border>
+                        <id>32771</id>
+                        <color R="255"
+                               G="255"
+                               B="255" />
+                        <placement>Left</placement>
+                        <style>solid</style>
+                        <width>0.4</width>
+                    </border>
+                </borders>
+            </objs>
+        </formFormatting>
+    </formFormattings>
+    <smartpush />
+</form>
